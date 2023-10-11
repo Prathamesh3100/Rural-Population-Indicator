@@ -11,6 +11,10 @@
  
 </div>
 <br>
-<div style="margin-left: 150px;" id="line-graph"></div>
-<div id="tooltip" style="position: absolute; display: none; background: white; border: 1px solid #ccc; padding: 10px; border-radius: 5px;"></div>
+<div id="container">
+  <p style="margin-left: 88px;" class="h3 vertical-text" *ngIf="graphflag">Rural Population's Development</p>
+  <div  id="line-graph"></div>
+  <div id="tooltip" style="position: absolute; display: none; background: white; border: 1px solid #ccc;  border-radius: 5px;"></div>
+</div>
+<p class="h3" *ngIf="graphflag" style="margin-left: 725px;">Year</p>
 <router-outlet></router-outlet>

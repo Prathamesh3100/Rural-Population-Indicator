@@ -115,30 +115,6 @@ export class AppComponent {
     .attr("stroke","#e0e0e0")
     .attr("stroke-width", .5);
 
-    // Add X-axis label
-    svg.append("text")
-    .attr("class", "y-axis-label")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left)
-    .attr("x", 0 - (height / 2))
-    .attr("dy", "1em")
-    .style("font-size", "14px")
-    .style("fill", "#777")
-    .style("font-family", "sans-serif")
-    .style("text-anchor", "middle")
-    .text("Value");
-
-   // Add X-axis label
-    svg.append("text")
-    .attr("class", "x-axis-label")
-    .attr("x", width / 2)
-    .attr("y", height + margin.top + 10) 
-    .style("text-anchor", "middle")
-    .style("font-size", "14px")
-    .style("fill", "#777")
-    .style("font-family", "sans-serif")
-    .text("Year");
-
     const Circle = svg.append('circle')
       .attr('r', 0)
       .attr('fill', 'steelblue')
@@ -200,6 +176,7 @@ export class AppComponent {
     debugger;
     this.appService.showData().subscribe((data) =>{
       this.backendData = data;
+      this.GenerateGraph();
     })
   }
 }

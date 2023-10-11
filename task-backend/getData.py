@@ -1,6 +1,6 @@
 import csv
 
-def get_data():
+def get_csv_data():
     csv_file_path = './dataset_world_bank_220119.csv'
     data = read_csv_file(csv_file_path)
     return data
