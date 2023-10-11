@@ -1,0 +1,16 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/" style="margin-left: 635px;">Rural Population's Development</a>
+</nav>
+<div class="container" style="margin-top: 58px;">
+  <p style="margin-left: 99px;" class="h2">World Development Indicator</p>
+  <select [(ngModel)] = "selectedCountry" (ngModelChange)="ChangeCountry()" aria-label="Default selected example" style="margin-left: 315px;">
+    <option value="" disabled selected>Select your option</option>
+    <option *ngFor="let data of backendData">{{data.Country_Name}}</option>
+  </select>
+ 
+</div>
+<br>
+<div style="margin-left: 150px;" id="line-graph"></div>
+<div id="tooltip" style="position: absolute; display: none; background: white; border: 1px solid #ccc; padding: 10px; border-radius: 5px;"></div>
+<router-outlet></router-outlet>
