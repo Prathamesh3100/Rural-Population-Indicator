@@ -3,6 +3,7 @@ task-frontend/node_modules
 
 # ignore venv
 task-backend/venv
+task-backend/__pycache__/
 
 task-frontend/.vscode
 task-frontend/.angular/cache
